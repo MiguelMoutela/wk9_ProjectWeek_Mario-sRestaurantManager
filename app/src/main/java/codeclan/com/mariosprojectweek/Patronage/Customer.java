@@ -2,6 +2,7 @@ package codeclan.com.mariosprojectweek.Patronage;
 
 import java.util.ArrayList;
 
+import codeclan.com.mariosprojectweek.Menu.Dish;
 import codeclan.com.mariosprojectweek.Patronal;
 import codeclan.com.mariosprojectweek.Sellable;
 
@@ -13,8 +14,9 @@ public class Customer implements Patronal {
     private ArrayList<Sellable>order;
     private float funds;
 
-    public Customer(ArrayList order) {
+    public Customer() {
         this.order = new ArrayList<>();
+        this.funds = funds;
     }
 
     public float getBill() {
@@ -25,4 +27,15 @@ public class Customer implements Patronal {
         return totalBill;
     }
 
+    public float getFunds() {
+        return funds;
+    }
+
+    public void setFunds(float funds) {
+        this.funds = funds;
+    }
+
+    public void addToOrder(Dish dish) {
+        order.add(dish);
+    }
 }
