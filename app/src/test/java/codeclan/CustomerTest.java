@@ -34,4 +34,12 @@ public class CustomerTest {
         customer.addToOrder(dish);
         assertEquals(10, customer.getBill(),0.01);
     }
+    @Test
+    public void canPaybill() {
+        customer.addToOrder(dish);
+        assertEquals(10, customer.getBill(),0.01);
+        customer.setFunds(100);
+        customer.payBill(customer.getBill());
+        assertEquals(90, customer.getFunds(),0.01);
+    }
 }

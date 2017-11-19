@@ -18,6 +18,22 @@ public class Table {
         }
         return tableTotal;
     }
+    public void goDutch() {
+        int partySize = howBigIsTheParty();
+        float amount = getTableTotal() / partySize;
+        for (Patronal person : table) {
+            person.payBill(amount);
+        }
+    }
+    public int howBigIsTheParty() {
+        int partyCounter = 0;
+        for (int index = 0; index < this.table.length; index++) {
+            if (this.table[index] != null) {
+                partyCounter ++;
+            }
+        }return partyCounter;
+    }
+
     public boolean checkTableIsVacant() {
         boolean tableIsVacant = false;
         int emptySeatCounter = 0;

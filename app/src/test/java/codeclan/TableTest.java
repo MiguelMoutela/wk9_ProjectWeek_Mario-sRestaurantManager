@@ -46,6 +46,4 @@ public class TableTest {
         table.addToTable(customer);
         assertEquals(10, table.getTableTotal(),0.01);
     }
-
-
 }
