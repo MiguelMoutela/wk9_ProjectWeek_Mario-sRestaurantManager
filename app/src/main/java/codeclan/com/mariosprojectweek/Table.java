@@ -25,7 +25,7 @@ public class Table {
             }
         }
     }
-    public void removeFromTable(Patronal patron) {
+    public void removeFromTable() {
         for(int index = 0; index < this.table.length-1; index++) {
             if (table[index] != null) {
                 table[index] = null;
