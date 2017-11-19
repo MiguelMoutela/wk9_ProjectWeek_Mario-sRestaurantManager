@@ -1,5 +1,7 @@
 package codeclan.com.mariosprojectweek.Bar;
 
+import java.util.HashMap;
+
 import codeclan.com.mariosprojectweek.Menu.Menu.BarItem;
 
 /**

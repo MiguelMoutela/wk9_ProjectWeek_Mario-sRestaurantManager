@@ -5,5 +5,5 @@ package codeclan.com.mariosprojectweek;
  */
 
 public interface Sellable {
-    getPrice();
+    public float getPrice();
 }

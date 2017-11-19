@@ -12,4 +12,12 @@ public class Ingredient {
         this.name = name;
         this.type = type;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Enum<IngredientType> getType() {
+        return type;
+    }
 }

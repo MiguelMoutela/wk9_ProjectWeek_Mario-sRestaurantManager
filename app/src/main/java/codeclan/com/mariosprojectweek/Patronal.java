@@ -5,5 +5,5 @@ package codeclan.com.mariosprojectweek;
  */
 
 public interface Patronal {
-    getBill();
+    public float getBill();
 }
