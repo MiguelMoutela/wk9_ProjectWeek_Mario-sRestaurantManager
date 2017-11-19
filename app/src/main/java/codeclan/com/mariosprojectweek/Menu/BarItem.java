@@ -11,7 +11,7 @@ public class BarItem implements Sellable {
     private float price;
 
     public BarItem (String name, float price){
-        this.name = name;
+        this.name = name.toLowerCase();
         this.price = price;
     }
 

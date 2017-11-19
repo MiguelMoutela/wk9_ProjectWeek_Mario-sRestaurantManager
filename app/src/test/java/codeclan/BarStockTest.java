@@ -21,11 +21,17 @@ public class BarStockTest {
     public void before() {
         barStock = new BarStock();
         barItem1 = new BarItem("thatDrink",5);
-        barItem2 = new BarItem("theOtherDrink",6);
+        barItem2 = new BarItem("thatDrink",5);
     }
     @Test
     public void canAddToStockAndGetSize() {
         barStock.addToStock(barItem1);
+        assertEquals(1, barStock.getSize());
+    }
+    @Test
+    public void canAddByName() {
+        barStock.addToStock(barItem1);
+        barStock.addToStockByName(barItem2);
         assertEquals(1, barStock.getSize());
     }
 }

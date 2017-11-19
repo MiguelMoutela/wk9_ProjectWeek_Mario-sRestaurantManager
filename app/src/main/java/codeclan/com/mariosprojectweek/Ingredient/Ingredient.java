@@ -9,7 +9,7 @@ public class Ingredient {
     private Enum<IngredientType>type;
 
     public Ingredient(String name, IngredientType type) {
-        this.name = name;
+        this.name = name.toLowerCase();
         this.type = type;
     }
 
