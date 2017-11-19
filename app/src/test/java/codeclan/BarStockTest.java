@@ -28,11 +28,11 @@ public class BarStockTest {
         barStock.addToStock(barItem1);
         assertEquals(1, barStock.getSize());
     }
-    @Test
-    public void canAddByName() {
-        barStock.addToStockByName(barItem1);
-        assertEquals(1, barStock.getSize());
-        barStock.addToStockByName(barItem2);
-        assertEquals(1, barStock.getSize());
-    }
+//    @Test
+//    public void canAddByName() {
+//        barStock.addToStockByName(barItem1);
+//        assertEquals(1, barStock.getSize());
+//        barStock.addToStockByName(barItem2);
+//        assertEquals(1, barStock.getSize());
+//    }
 }

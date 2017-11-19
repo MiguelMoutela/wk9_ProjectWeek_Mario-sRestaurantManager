@@ -19,8 +19,8 @@ public class BarItemTest {
         barItem = new BarItem("thatDrink", 5);
     }
     @Test
-    public void canGetName() {
-        assertEquals("thatDrink", barItem.getName());
+    public void canGetNameToLowerCase() {
+        assertEquals("thatdrink", barItem.getName());
     }
     @Test
     public void canGetPrice() {

@@ -1,4 +1,4 @@
-package codeclan.com.mariosprojectweek.Patron;
+package codeclan.com.mariosprojectweek.Patronage;
 
 import java.util.ArrayList;
 
