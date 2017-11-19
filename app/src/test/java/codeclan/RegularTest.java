@@ -33,4 +33,12 @@ public class RegularTest {
         regular.addToOrder(dish);
         assertEquals(9, regular.getBill(),0.01);
     }
+    @Test
+    public void canPaybill() {
+        regular.addToOrder(dish);
+        assertEquals(9, regular.getBill(),0.01);
+        regular.setFunds(100);
+        regular.payBill(regular.getBill());
+        assertEquals(91, regular.getFunds(),0.01);
+    }
 }

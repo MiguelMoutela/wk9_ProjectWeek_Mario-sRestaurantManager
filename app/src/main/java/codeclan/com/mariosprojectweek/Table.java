@@ -20,7 +20,7 @@ public class Table {
     }
     public void goDutch() {
         int partySize = howBigIsTheParty();
-        float amount = getTableTotal() / partySize;
+        float amount = (getTableTotal() / partySize);
         for (Patronal person : table) {
             person.payBill(amount);
         }
