@@ -15,4 +15,6 @@ public class Regular implements Patronal {
     public Regular(ArrayList order) {
         this.order = new ArrayList<>();
     }
+
+    public float getBill(){}
 }

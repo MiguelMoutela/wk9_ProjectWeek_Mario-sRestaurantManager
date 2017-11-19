@@ -16,6 +16,8 @@ public class Customer implements Patronal {
         this.order = new ArrayList<>();
     }
 
-    public float getBill() {}
+    public float getBill() {
+        return null;
+    }
 
 }
