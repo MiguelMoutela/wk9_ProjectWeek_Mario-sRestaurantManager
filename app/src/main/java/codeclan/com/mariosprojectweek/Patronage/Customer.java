@@ -11,6 +11,7 @@ import codeclan.com.mariosprojectweek.Sellable;
 
 public class Customer implements Patronal {
     private ArrayList<Sellable>order;
+    private float funds;
 
     public Customer(ArrayList order) {
         this.order = new ArrayList<>();
