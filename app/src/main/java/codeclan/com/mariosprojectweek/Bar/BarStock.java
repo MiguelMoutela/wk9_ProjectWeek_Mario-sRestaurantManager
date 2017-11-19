@@ -1,6 +1,6 @@
 package codeclan.com.mariosprojectweek.Bar;
 
-import codeclan.com.mariosprojectweek.BarItem;
+import codeclan.com.mariosprojectweek.Menu.Menu.BarItem;
 
 /**
  * Created by user on 19/11/2017.

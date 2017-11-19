@@ -1,10 +1,12 @@
-package codeclan.com.mariosprojectweek;
+package codeclan.com.mariosprojectweek.Menu;
+
+import codeclan.com.mariosprojectweek.Sellable;
 
 /**
  * Created by user on 19/11/2017.
  */
 
-public class BarItem implements Sellable{
+public class BarItem implements Sellable {
     private String name;
     private float price;
 
