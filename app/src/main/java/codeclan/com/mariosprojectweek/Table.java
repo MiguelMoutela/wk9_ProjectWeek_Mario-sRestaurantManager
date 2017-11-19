@@ -10,4 +10,19 @@ public class Table {
     public Table() {
         this.table = new Patronal[2];
     }
+
+    public float getTableTotal() {
+        float tableTotal = 0;
+        for (Patronal person : table) {
+            tableTotal += person.getBill();
+        }
+        return tableTotal;
+    }
+    public void addToTable(Patronal patron) {
+        for(int index = 0; index < this.table.length; index++) {
+            if (table[index] == null) {
+                table[index] = patron;
+            }
+        }
+    }
 }
