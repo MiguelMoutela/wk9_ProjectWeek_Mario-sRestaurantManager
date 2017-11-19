@@ -2,9 +2,10 @@ package codeclan.com.mariosprojectweek.Bar;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 import codeclan.com.mariosprojectweek.Menu.BarItem;
-import codeclan.com.mariosprojectweek.Menu.Menu.BarItem;
+
 
 /**
  * Created by user on 19/11/2017.
@@ -17,8 +18,8 @@ public class BarStock {
         barInventory.put(barItem1,1);
     }
 
-    public ArrayList<String> getKeys() {
-        barInventory.keySet();
+    public Set<BarItem> getKeys() {
+       return barInventory.keySet();
     }
 
     public int getSize() {
@@ -26,6 +27,15 @@ public class BarStock {
         return size;
     }
 
-    public void addToStockByName(BarItem barItem2) {
+//    public void addToStockByName(BarItem barItem) {
+//        Set<BarItem> drinkMenu = getKeys();
+//        for (BarItem item : drinkMenu) {
+//            if (barItem.getName().equals(item.getName())) {
+//                ArrayList<BarItem> barInventory(barItem) + 1;
+//            }
+//        }
+//    }
+    public void AddToStockByName(BarItem BarItem) {
+        barInventory.put(BarItem, barInventory.get(BarItem) +1);
     }
 }

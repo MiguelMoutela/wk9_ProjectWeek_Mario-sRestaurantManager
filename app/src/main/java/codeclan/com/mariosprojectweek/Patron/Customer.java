@@ -12,12 +12,16 @@ import codeclan.com.mariosprojectweek.Sellable;
 public class Customer implements Patronal {
     private ArrayList<Sellable>order;
 
-    public Customer(ArrayList Order) {
+    public Customer(ArrayList order) {
         this.order = new ArrayList<>();
     }
 
     public float getBill() {
-        return null;
+        float totalBill = 0;
+        for (Sellable item : order) {
+            totalBill += item.getPrice();
+        }
+        return totalBill;
     }
 
 }

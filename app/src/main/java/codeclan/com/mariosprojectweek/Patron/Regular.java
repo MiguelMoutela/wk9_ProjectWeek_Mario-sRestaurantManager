@@ -16,7 +16,11 @@ public class Regular implements Patronal {
         this.order = new ArrayList<>();
     }
 
-    public float getBill(){
-        return null
+    public float getBill() {
+        float totalBill = 0;
+        for (Sellable item : order) {
+            totalBill += item.getPrice();
+        }
+        return totalBill;
     }
 }
