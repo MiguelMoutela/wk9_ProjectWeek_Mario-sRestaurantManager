@@ -19,9 +19,16 @@ public class Table {
         return tableTotal;
     }
     public void addToTable(Patronal patron) {
-        for(int index = 0; index < this.table.length; index++) {
+        for(int index = 0; index < this.table.length-1; index++) {
             if (table[index] == null) {
                 table[index] = patron;
+            }
+        }
+    }
+    public void removeFromTable(Patronal patron) {
+        for(int index = 0; index < this.table.length-1; index++) {
+            if (table[index] != null) {
+                table[index] = null;
             }
         }
     }
