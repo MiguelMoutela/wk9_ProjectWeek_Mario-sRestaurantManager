@@ -10,7 +10,7 @@ import codeclan.com.mariosprojectweek.Sellable;
  */
 
 public class Dish implements Sellable {
-    HashMap<Ingredient, Integer>ingredientList= new HashMap<Ingredient,Integer>();
+    HashMap<Ingredient, Integer>ingredientList= new HashMap<>();
     float price;
 
     public float getPrice() {

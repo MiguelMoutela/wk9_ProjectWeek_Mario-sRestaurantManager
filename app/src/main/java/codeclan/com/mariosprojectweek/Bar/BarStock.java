@@ -12,7 +12,7 @@ import codeclan.com.mariosprojectweek.Menu.BarItem;
  */
 
 public class BarStock {
-    HashMap<BarItem,Integer> barInventory = new HashMap<BarItem, Integer>();
+    HashMap<BarItem,Integer> barInventory = new HashMap<>();
 
     public void addToStock(BarItem barItem1) {
         barInventory.put(barItem1,1);
@@ -27,15 +27,18 @@ public class BarStock {
         return size;
     }
 
-//    public void addToStockByName(BarItem barItem) {
-//        Set<BarItem> drinkMenu = getKeys();
-//        for (BarItem item : drinkMenu) {
-//            if (barItem.getName().equals(item.getName())) {
-//                ArrayList<BarItem> barInventory(barItem) + 1;
-//            }
-//        }
-//    }
-    public void AddToStockByName(BarItem BarItem) {
-        barInventory.put(BarItem, barInventory.get(BarItem) +1);
+    public void addToStockByName(BarItem barItem) {
+        Set<BarItem> drinkMenu = getKeys();
+        for (BarItem item : drinkMenu) {
+            if (barItem.getName().equals(item.getName())) {
+                int barItemQuantity = barInventory.get(barItem);
+                barInventory.put(barItem, barItemQuantity + 1);
+            }
+            else barInventory.put(barItem,1);
+        }
     }
+//    public void addToStockByName(BarItem BarItem) {
+//        barInventory.put(BarItem, barInventory.get(BarItem) +1);
+//    }
+// apparently this should add 1 to value if it finds a key or just add the pair
 }

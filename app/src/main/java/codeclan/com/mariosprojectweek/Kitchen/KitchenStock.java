@@ -9,5 +9,5 @@ import codeclan.com.mariosprojectweek.Ingredient.Ingredient;
  */
 
 public class KitchenStock {
-    HashMap<Ingredient,Integer> kitchenInventory = new HashMap<Ingredient, Integer>();
+    HashMap<Ingredient,Integer> kitchenInventory = new HashMap<>();
 }
