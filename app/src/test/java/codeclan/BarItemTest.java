@@ -3,7 +3,7 @@ package codeclan;
 import org.junit.Before;
 import org.junit.Test;
 
-import codeclan.com.mariosprojectweek.Bar.BarItem;
+import codeclan.com.mariosprojectweek.Menu.BarItem;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,11 +16,15 @@ public class BarItemTest {
 
     @Before
     public void before() {
-        barItem = new BarItem("thatDrink");
+        barItem = new BarItem("thatDrink", 5);
     }
     @Test
     public void canGetName() {
         assertEquals("thatDrink", barItem.getName());
+    }
+    @Test
+    public void canGetPrice() {
+        assertEquals(5, barItem.getPrice(),0.01);
     }
 
 }
