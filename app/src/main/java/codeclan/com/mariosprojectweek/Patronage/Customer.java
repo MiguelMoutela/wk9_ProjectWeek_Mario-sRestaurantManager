@@ -35,7 +35,7 @@ public class Customer implements Patronal {
         this.funds = funds;
     }
 
-    public void addToOrder(Dish dish) {
-        order.add(dish);
+    public void addToOrder(Sellable item) {
+        order.add(item);
     }
 }
