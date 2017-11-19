@@ -25,8 +25,8 @@ public class BarStockTest {
     }
     @Test
     public void canAddToStockAndGetSize() {
+        assertEquals(0, barStock.getSize());
         barStock.addToStock(barItem1);
-
         assertEquals(1, barStock.getSize());
 
     }

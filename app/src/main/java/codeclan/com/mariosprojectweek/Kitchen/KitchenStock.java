@@ -10,4 +10,12 @@ import codeclan.com.mariosprojectweek.Ingredient.Ingredient;
 
 public class KitchenStock {
     HashMap<Ingredient,Integer> kitchenInventory = new HashMap<>();
+
+    public int getSize() {
+        return kitchenInventory.values().size();
+    }
+
+    public void addToStock(Ingredient ingredient) {
+        kitchenInventory.put(ingredient,1);
+    }
 }

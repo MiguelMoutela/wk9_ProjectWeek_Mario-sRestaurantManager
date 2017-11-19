@@ -11,7 +11,15 @@ import codeclan.com.mariosprojectweek.Sellable;
 
 public class Dish implements Sellable {
     HashMap<Ingredient, Integer>ingredientList= new HashMap<>();
+    String name;
     float price;
+
+    public Dish(String name, float price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getName() {return this.name; }
 
     public float getPrice() {
         return this.price;
