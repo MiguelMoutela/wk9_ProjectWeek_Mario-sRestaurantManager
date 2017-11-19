@@ -18,14 +18,25 @@ public class Table {
         }
         return tableTotal;
     }
+    public boolean checkTableIsVacant() {
+        boolean tableIsVacant = false;
+        int emptySeatCounter = 0;
+        for(int index = 0; index < this.table.length; index++) {
+            if (table[index] == null) {
+                emptySeatCounter ++;
+            }
+        }if (emptySeatCounter == table.length) {
+            tableIsVacant = true;
+        }return tableIsVacant;
+    }
     public void addToTable(Patronal patron) {
-        for(int index = 0; index < this.table.length-1; index++) {
+        for(int index = 0; index < this.table.length; index++) {
             if (table[index] == null) {
                 table[index] = patron;
-            }
+            }break;
         }
     }
-    public void removeFromTable() {
+    public void partyLeaves() {
         for(int index = 0; index < this.table.length-1; index++) {
             if (table[index] != null) {
                 table[index] = null;
