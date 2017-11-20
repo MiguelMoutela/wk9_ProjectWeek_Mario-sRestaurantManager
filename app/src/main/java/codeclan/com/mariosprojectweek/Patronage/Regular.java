@@ -44,12 +44,15 @@ public class Regular implements Patronal {
     }
 
     public void checkItemsAreInStock() {
-        for (Storable fridge : Restaurant.stores) {
-
 
             for (Sellable item : order) {
-
-                fridge.checkAmount(item.getListOfIngredients());
+                ArrayList<String>listOfIngredients = item.getListOfIngredients();
+                for (String ingredient : listOfIngredients)
+                    for (Storable fridge : Restaurant.stores) {
+                        if (fridge.checkAmount(ingredient) == 0) {
+                            //remove item from order
+                            //remove item from menu
+                        }
 
 
                 //int amount = fridge.checkAmount(item.Name());
