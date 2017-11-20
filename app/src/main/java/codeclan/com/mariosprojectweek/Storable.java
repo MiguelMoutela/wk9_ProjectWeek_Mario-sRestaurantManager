@@ -5,5 +5,5 @@ package codeclan.com.mariosprojectweek;
  */
 
 public interface Storable {
-    public int checkAmount(String name);
+    int checkAmount(String name);
 }
