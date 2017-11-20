@@ -29,7 +29,10 @@ public class Regular implements Patronal {
 
     public float getBill() {
         float totalBill = 0;
-        for (Sellable item : order) {
+        for (Dish item : order) {
+            totalBill += (item.getPrice()*(1-this.discount)) ;
+        }
+        for (BarItem item : drinkOrder) {
             totalBill += (item.getPrice()*(1-this.discount)) ;
         }
         return totalBill;
@@ -54,8 +57,6 @@ public class Regular implements Patronal {
     public void addToDrinkOrder(BarItem item) {drinkOrder.add(item);}
 
     public void checkItemsAreInStock() {
-
-
 
             for (Sellable item : order) {
                 ArrayList<String>listOfIngredients = item.getListOfIngredients();

@@ -25,11 +25,15 @@ public class Customer implements Patronal {
 
     public float getBill() {
         float totalBill = 0;
-        for (Sellable item : order) {
-            totalBill += item.getPrice();
+        for (Dish item : order) {
+            totalBill += (item.getPrice()) ;
+        }
+        for (BarItem item : drinkOrder) {
+            totalBill += (item.getPrice()) ;
         }
         return totalBill;
     }
+
 
     public float getFunds() {
         return funds;
