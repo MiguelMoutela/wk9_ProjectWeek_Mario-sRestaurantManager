@@ -62,7 +62,6 @@ public class Customer implements Patronal {
     }
 
     public boolean checkKitchenHasIngredients() {
-
         boolean KitchenHasIngredients = false;
         for (Dish item : foodOrder) {
             ArrayList<String>listOfIngredients = item.getListOfIngredients();
@@ -80,7 +79,6 @@ public class Customer implements Patronal {
     }
 
     public boolean checkBarHasItem() {
-
         boolean barHasItem = false;
         for (BarItem item : drinkOrder) {
             if (BarStock.checkAmount(item.getName()) != 0) {
