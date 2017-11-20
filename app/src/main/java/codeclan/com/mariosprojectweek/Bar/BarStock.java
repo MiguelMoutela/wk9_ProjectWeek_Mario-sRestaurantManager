@@ -42,6 +42,11 @@ public class BarStock {
             return 0;
         }
     }
+    public void removeFromStockByName(String name) {
+        if (checkAmount(name) > 0) {
+            barInventory.put(name, barInventory.get(name) - 1);
+        }
+    }
 
 //    public void addToStockByName(String name) {
 //        Set<String> stockList = getKeys();

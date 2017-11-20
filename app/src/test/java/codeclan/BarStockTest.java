@@ -41,4 +41,22 @@ public class BarStockTest {
         assertEquals(1, barStock.getSize());
         assertEquals(2, barStock.checkAmount("thatdrink"));
     }
+    @Test
+    public void canRemoveByName() {
+        //add by name
+        String name = barItem1.getName();
+        String name2 = barItem2.getName();
+        barStock.addToStockByName(name);
+        assertEquals(1, barStock.getSize());
+        barStock.addToStockByName(name2);
+        assertEquals(1, barStock.getSize());
+        assertEquals(2, barStock.checkAmount("thatdrink"));
+        //remove by name
+        barStock.removeFromStockByName(name);
+        assertEquals(1, barStock.checkAmount("thatdrink"));
+        barStock.removeFromStockByName(name);
+        assertEquals(0, barStock.checkAmount("thatdrink"));
+        barStock.removeFromStockByName(name);
+        assertEquals(0, barStock.checkAmount("thatdrink"));
+    }
 }
