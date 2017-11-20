@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 import codeclan.com.mariosprojectweek.Menu.BarItem;
+import codeclan.com.mariosprojectweek.Storable;
 
 import static java.nio.file.Paths.get;
 
@@ -13,7 +14,7 @@ import static java.nio.file.Paths.get;
  * Created by user on 19/11/2017.
  */
 
-public class BarStock {
+public class BarStock implements Storable{
     HashMap<String, Integer> barInventory = new HashMap<>();
 
     public void addToStock(String name) {

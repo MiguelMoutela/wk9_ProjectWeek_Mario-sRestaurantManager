@@ -38,6 +38,7 @@ public class Customer implements Patronal {
     public void addToOrder(Sellable item) {
         order.add(item);
     }
+
     public void payBill(float bill) {
         this.funds -= bill;
     }

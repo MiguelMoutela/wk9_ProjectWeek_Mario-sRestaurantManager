@@ -2,6 +2,8 @@ package codeclan.com.mariosprojectweek.Patronage;
 
 import java.util.ArrayList;
 
+import codeclan.com.mariosprojectweek.Bar.BarStock;
+import codeclan.com.mariosprojectweek.Menu.BarItem;
 import codeclan.com.mariosprojectweek.Menu.Dish;
 import codeclan.com.mariosprojectweek.Patronal;
 import codeclan.com.mariosprojectweek.Sellable;
@@ -35,10 +37,19 @@ public class Regular implements Patronal {
         return funds;
     }
 
-    public void addToOrder(Sellable item) {
-        order.add(item);
-    }
     public void payBill(float bill) {
         this.funds -= bill;
     }
+
+    public void checkIngredientsAreInStock() {
+        for (Sellable item : order) {
+
+        }
+    }
+
+    public void addToOrder(Sellable item) {
+        order.add(item);
+    }
+
+
 }
