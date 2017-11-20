@@ -29,7 +29,7 @@ public class TableTest {
         assertEquals(true, table.checkTableIsVacant());
         table.addToTable(customer);
         table.addToTable(customer);
-        assertEquals(false, table.checkTableIsVacant());
+        assertEquals(2, table.howBigIsTheParty());
     }
     @Test
     public void canRemovePatron() {

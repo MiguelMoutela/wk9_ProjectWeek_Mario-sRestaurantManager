@@ -25,7 +25,6 @@ public class BarStock implements Storable{
         int size = barInventory.values().size();
         return size;
     }
-
     public void addToStockByName(String name) {
         if (barInventory.get(name) != null) {
             barInventory.put(name, barInventory.get(name) + 1);
@@ -48,24 +47,4 @@ public class BarStock implements Storable{
             barInventory.put(name, barInventory.get(name) - 1);
         }
     }
-
-//    public void addToStockByName(String name) {
-//        Set<String> stockList = getKeys();
-//        for (String itemName : stockList) {
-//            if (name.equals(itemName)) {
-//                int barItemQuantity = barInventory.get(itemName);
-//                barInventory.put(itemName, barItemQuantity + 1);
-//            }
-//            else {
-//                barInventory.put(name, 1);
-//            }
-//        }
-//    }
-
-// apparently this should add 1 to value if it finds a key or just add the pair
-//    public Set<String> getKeys() {
-//       return barInventory.keySet();
-//    }
-
-
 }
