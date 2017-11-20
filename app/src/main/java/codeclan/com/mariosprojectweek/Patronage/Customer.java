@@ -65,9 +65,9 @@ public class Customer implements Patronal {
         boolean KitchenHasIngredients = false;
         for (Dish item : foodOrder) {
             ArrayList<String>listOfIngredients = item.getListOfIngredients();
-            for (String ingredient : listOfIngredients) {
+            for (String ingredientName : listOfIngredients) {
                 int howManyIngredientsKitchenHas = 0;
-                if (KitchenStock.checkAmount(ingredient)) != 0) {
+                if (KitchenStock.checkAmount(ingredientName)) != 0) {
                     howManyIngredientsKitchenHas ++;
                 }
             }

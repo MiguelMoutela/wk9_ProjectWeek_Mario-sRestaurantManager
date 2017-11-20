@@ -2,6 +2,7 @@ package codeclan.com.mariosprojectweek.Menu;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import codeclan.com.mariosprojectweek.Ingredient.Ingredient;
 import codeclan.com.mariosprojectweek.Sellable;
@@ -24,5 +25,15 @@ public class Dish implements Sellable {
 
     public float getPrice() {
         return this.price;
+    }
+
+    public ArrayList<String> getListOfIngredients() {
+        ArrayList ListOfIngredients = new ArrayList<>();
+        for (Ingredient ingredient : ingredientList) {
+            ListOfIngredients.add(ingredient.getName());
+        }
+        return ListOfIngredients;
+//        List<String> ListOfIngredients = new ArrayList<>(toString(ingredientList);
+//        return ListOfIngredients;
     }
 }
