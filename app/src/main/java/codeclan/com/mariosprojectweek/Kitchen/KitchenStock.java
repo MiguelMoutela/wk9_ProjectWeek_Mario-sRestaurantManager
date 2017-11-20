@@ -35,4 +35,10 @@ public class KitchenStock {
             return 0;
         }
     }
+
+    public void removeFromStockByName(String name) {
+        if (checkAmount(name) > 0) {
+            kitchenInventory.put(name, kitchenInventory.get(name) - 1);
+        }
+    }
 }

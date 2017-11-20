@@ -45,5 +45,22 @@ public class KitchenStockTest {
         assertEquals(2, kitchenStock.getSize());
         assertEquals(1, kitchenStock.checkAmount(name2));
     }
-
+    @Test
+    public void canRemoveFromStockByName() {
+        //adding to stock
+        assertEquals(0,kitchenStock.getSize());
+        String name1 = ingredient1.getName();
+        kitchenStock.addToStockByName(name1);
+        assertEquals(1, kitchenStock.getSize());
+        assertEquals(1, kitchenStock.checkAmount(name1));
+        String name2 = ingredient2.getName();
+        assertEquals(0, kitchenStock.checkAmount(name2));
+        kitchenStock.addToStockByName(name2);
+        assertEquals(2, kitchenStock.getSize());
+        assertEquals(1, kitchenStock.checkAmount(name2));
+        //now removing
+        kitchenStock.removeFromStockByName(name1);
+        assertEquals(0, kitchenStock.checkAmount(name1));
+        assertEquals(2, kitchenStock.getSize());
+    }
 }
