@@ -15,7 +15,6 @@ public class Customer implements Patronal {
     private ArrayList<Dish>order;
     private ArrayList<BarItem>drinkOrder;
     private float funds;
-    private float discount;
 
     public Customer() {
         this.order = new ArrayList<>();
@@ -33,7 +32,6 @@ public class Customer implements Patronal {
         }
         return totalBill;
     }
-
 
     public float getFunds() {
         return funds;
