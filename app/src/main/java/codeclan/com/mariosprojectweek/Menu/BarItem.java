@@ -10,14 +10,12 @@ import codeclan.com.mariosprojectweek.Sellable;
  */
 
 public class BarItem implements Sellable {
-    ArrayList<Ingredient> ingredientList;
     private String name;
     private float price;
 
     public BarItem(String name, float price) {
         this.name = name.toLowerCase();
         this.price = price;
-        this.ingredientList = new ArrayList<>();
     }
 
     public float getPrice() {
@@ -28,13 +26,6 @@ public class BarItem implements Sellable {
         return name;
     }
 
-    public ArrayList<String> getListOfIngredients() {
-        ArrayList<String> ListOfIngredients = new ArrayList<String>();
-        for (Ingredient ingredient : ingredientList) {
-            ListOfIngredients.add(ingredient.getName());
-        }
-        return ListOfIngredients;
-    }
 }
 
 

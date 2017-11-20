@@ -27,7 +27,6 @@ public class KitchenStock implements Storable{
         else {
             kitchenInventory.put(name, 1);
         }
-
     }
 
     public int checkAmount(String name) {
