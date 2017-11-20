@@ -6,7 +6,8 @@ package codeclan.com.mariosprojectweek.Ingredient;
 
 public enum IngredientType {
     VEGAN,
-    REGULAR;
+    VEGETARIAN,
+    GLUTEN_FREE;
 }
 
 // have you considered several enums per ingredient?

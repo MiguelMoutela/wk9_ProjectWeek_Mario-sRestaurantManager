@@ -14,7 +14,9 @@ public class Table {
     public float getTableTotal() {
         float tableTotal = 0;
         for (Patronal person : table) {
-            tableTotal += person.getBill();
+            if (person != null) {
+                tableTotal += person.getBill();
+            }
         }
         return tableTotal;
     }

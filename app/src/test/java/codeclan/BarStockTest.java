@@ -25,16 +25,20 @@ public class BarStockTest {
     }
     @Test
     public void canAddToStockAndGetSize() {
+        String name = barItem1.getName();
         assertEquals(0, barStock.getSize());
-        barStock.addToStock(barItem1);
+        barStock.addToStock(name);
         assertEquals(1, barStock.getSize());
 
     }
     @Test
     public void canAddByName() {
-        barStock.addToStockByName(barItem1);
+        String name = barItem1.getName();
+        String name2 = barItem2.getName();
+        barStock.addToStockByName(name);
         assertEquals(1, barStock.getSize());
-//        barStock.addToStockByName(barItem2);
-//        assertEquals(1, barStock.getSize());
+        barStock.addToStockByName(name2);
+        assertEquals(1, barStock.getSize());
+        assertEquals(2, barStock.checkAmount("thatdrink"));
     }
 }

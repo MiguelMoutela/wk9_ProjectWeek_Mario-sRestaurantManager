@@ -6,20 +6,18 @@ import java.util.Set;
 
 import codeclan.com.mariosprojectweek.Menu.BarItem;
 
+import static java.nio.file.Paths.get;
+
 
 /**
  * Created by user on 19/11/2017.
  */
 
 public class BarStock {
-    HashMap<BarItem,Integer> barInventory = new HashMap<>();
+    HashMap<String, Integer> barInventory = new HashMap<>();
 
-    public void addToStock(BarItem barItem1) {
-        barInventory.put(barItem1,1);
-    }
-
-    public Set<BarItem> getKeys() {
-       return barInventory.keySet();
+    public void addToStock(String name) {
+        barInventory.put(name, 1);
     }
 
     public int getSize() {
@@ -27,18 +25,41 @@ public class BarStock {
         return size;
     }
 
-    public void addToStockByName(BarItem barItem) {
-        Set<BarItem> drinkMenu = getKeys();
-        for (BarItem item : drinkMenu) {
-            if (barItem.getName().equals(item.getName())) {
-                int barItemQuantity = barInventory.get(barItem);
-                barInventory.put(barItem, barItemQuantity + 1);
-            }
-            else barInventory.put(barItem,1);
+    public void addToStockByName(String name) {
+        if (barInventory.get(name) != null) {
+            barInventory.put(name, barInventory.get(name) + 1);
+        }
+        else {
+            barInventory.put(name, 1);
+        }
+
+    }
+    public int checkAmount(String name) {
+        if (barInventory.get(name) != null) {
+            return barInventory.get(name);
+        }
+        else {
+            return 0;
         }
     }
-//    public void addToStockByName(BarItem BarItem) {
-//        barInventory.put(BarItem, barInventory.get(BarItem) +1);
+
+//    public void addToStockByName(String name) {
+//        Set<String> stockList = getKeys();
+//        for (String itemName : stockList) {
+//            if (name.equals(itemName)) {
+//                int barItemQuantity = barInventory.get(itemName);
+//                barInventory.put(itemName, barItemQuantity + 1);
+//            }
+//            else {
+//                barInventory.put(name, 1);
+//            }
+//        }
 //    }
+
 // apparently this should add 1 to value if it finds a key or just add the pair
+//    public Set<String> getKeys() {
+//       return barInventory.keySet();
+//    }
+
+
 }

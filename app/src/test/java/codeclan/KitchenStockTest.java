@@ -21,8 +21,8 @@ public class KitchenStockTest {
     @Before
     public void before() {
         kitchenStock = new KitchenStock();
-        ingredient1 = new Ingredient("fish", IngredientType.REGULAR);
-        ingredient2 = new Ingredient("potato", IngredientType.VEGAN);
+        ingredient1 = new Ingredient("potato", IngredientType.VEGETARIAN);
+        ingredient2 = new Ingredient("cream sauce", IngredientType.VEGAN);
     }
     @Test
     public void canAddToStockAndGetSize() {
