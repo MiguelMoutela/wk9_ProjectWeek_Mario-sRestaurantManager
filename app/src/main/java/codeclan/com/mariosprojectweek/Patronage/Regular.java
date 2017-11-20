@@ -15,18 +15,22 @@ import codeclan.com.mariosprojectweek.Storable;
  */
 
 public class Regular implements Patronal {
-    private ArrayList<Sellable>order;
+    private ArrayList<Dish>order;
+    private ArrayList<BarItem>drinkOrder;
     private float funds;
+    private float discount;
 
     public Regular() {
-        this.funds = funds;
+        this.funds = 0;
         this.order = new ArrayList<>();
+        this.drinkOrder = new ArrayList<>();
+        this.discount = 0.1f;
     }
 
     public float getBill() {
         float totalBill = 0;
         for (Sellable item : order) {
-            totalBill += (item.getPrice()*0.9) ;
+            totalBill += (item.getPrice()*(1-this.discount)) ;
         }
         return totalBill;
     }
@@ -43,7 +47,15 @@ public class Regular implements Patronal {
         this.funds -= bill;
     }
 
+    public void addToOrder(Dish item) {
+        order.add(item);
+    }
+
+    public void addToDrinkOrder(BarItem item) {drinkOrder.add(item);}
+
     public void checkItemsAreInStock() {
+
+
 
             for (Sellable item : order) {
                 ArrayList<String>listOfIngredients = item.getListOfIngredients();
@@ -70,9 +82,6 @@ public class Regular implements Patronal {
         }
     }
 
-    public void addToOrder(Sellable item) {
-        order.add(item);
-    }
 
 
 }

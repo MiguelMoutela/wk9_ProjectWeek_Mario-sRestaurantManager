@@ -9,5 +9,5 @@ import codeclan.com.mariosprojectweek.Sellable;
  */
 
 public class Menu {
-    ArrayList<Sellable>menu = new ArrayList<>();
+    private ArrayList<Sellable> menu = new ArrayList<>();
 }

@@ -33,7 +33,8 @@ public class Table {
             if (this.table[index] != null) {
                 partyCounter ++;
             }
-        }return partyCounter;
+        }
+        return partyCounter;
     }
 
     public boolean checkTableIsVacant() {
@@ -43,15 +44,18 @@ public class Table {
             if (table[index] == null) {
                 emptySeatCounter ++;
             }
-        }if (emptySeatCounter == table.length) {
+        }
+        if (emptySeatCounter == table.length) {
             tableIsVacant = true;
-        }return tableIsVacant;
+        }
+        return tableIsVacant;
     }
     public void addToTable(Patronal patron) {
         for(int index = 0; index < this.table.length; index++) {
             if (table[index] == null) {
                 table[index] = patron;
-            }break;
+                break;
+            }
         }
     }
     public void partyLeaves() {

@@ -13,10 +13,10 @@ public class Restaurant {
     private float turnover;
     private Table[] tables;
     private Menu menu;
-    private ArrayList<Storable>stores;
+    private ArrayList<ArrayList> stores;
 
 
-    public Restaurant () {
+    public Restaurant(Menu menu) {
         this.name = name;
         this.turnover = turnover;
         this.tables = new Table[5];
