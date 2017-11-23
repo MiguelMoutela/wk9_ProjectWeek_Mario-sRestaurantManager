@@ -1,4 +1,6 @@
-package codeclan.com.mariosprojectweek;
+package codeclan.com.mariosprojectweek.Table;
+
+import codeclan.com.mariosprojectweek.Patronal;
 
 /**
  * Created by user on 19/11/2017.
@@ -36,7 +38,6 @@ public class Table {
         }
         return partyCounter;
     }
-
     public boolean checkTableIsVacant() {
         boolean tableIsVacant = false;
         int emptySeatCounter = 0;

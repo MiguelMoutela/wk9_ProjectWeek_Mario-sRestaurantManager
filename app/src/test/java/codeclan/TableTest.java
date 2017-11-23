@@ -5,8 +5,7 @@ import org.junit.Test;
 
 import codeclan.com.mariosprojectweek.Menu.Dish;
 import codeclan.com.mariosprojectweek.Patronage.Customer;
-import codeclan.com.mariosprojectweek.Patronal;
-import codeclan.com.mariosprojectweek.Table;
+import codeclan.com.mariosprojectweek.Table.Table;
 
 import static org.junit.Assert.assertEquals;
 

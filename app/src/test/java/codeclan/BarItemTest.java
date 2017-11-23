@@ -26,5 +26,4 @@ public class BarItemTest {
     public void canGetPrice() {
         assertEquals(5, barItem.getPrice(),0.01);
     }
-
 }

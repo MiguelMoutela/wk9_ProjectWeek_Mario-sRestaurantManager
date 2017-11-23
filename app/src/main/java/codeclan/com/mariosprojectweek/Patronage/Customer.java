@@ -61,27 +61,28 @@ public class Customer implements Patronal {
         this.funds -= bill;
     }
 
-    public boolean checkKitchenHasIngredients() {
+    public boolean checkKitchenHasIngredients(KitchenStock kitchenStock) {
         boolean KitchenHasIngredients = false;
+        int howManyIngredientsKitchenHas = 0;
+
         for (Dish item : foodOrder) {
             ArrayList<String>listOfIngredients = item.getListOfIngredients();
             for (String ingredientName : listOfIngredients) {
-                int howManyIngredientsKitchenHas = 0;
-                if (KitchenStock.checkAmount(ingredientName)) != 0) {
+                if (kitchenStock.checkAmount(ingredientName) != 0) {
                     howManyIngredientsKitchenHas ++;
                 }
             }
             if (howManyIngredientsKitchenHas == listOfIngredients.size()) {
                 KitchenHasIngredients = true;
             }
-            return checkKitchenHasIngredients();
+            return KitchenHasIngredients;
         }
     }
 
-    public boolean checkBarHasItem() {
+    public boolean checkBarHasItem(BarStock barStock) {
         boolean barHasItem = false;
         for (BarItem item : drinkOrder) {
-            if (BarStock.checkAmount(item.getName()) != 0) {
+            if (barStock.checkAmount(item.getName()) != 0) {
                 barHasItem = true;
             }
         }
