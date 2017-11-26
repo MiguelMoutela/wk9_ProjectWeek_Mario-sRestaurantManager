@@ -44,14 +44,14 @@ public class Customer implements Patronal {
     }
 
     public void addToOrder(Dish item) {
-        if (checkKitchenHasIngredients() = true) {
+        if (checkKitchenHasIngredients(item) = true) {
             foodOrder.add(item);
         }
         else return;
     }
 
     public void addToDrinkOrder(BarItem item) {
-        if (checkBarHasItem() = false) {
+        if (checkBarHasItem(item) = false) {
             drinkOrder.add(item);
         }
         else return;
